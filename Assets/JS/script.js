@@ -1,0 +1,1 @@
+let quizTimer = document.querySelector("#timer");

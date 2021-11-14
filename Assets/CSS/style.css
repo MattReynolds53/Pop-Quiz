@@ -1,0 +1,10 @@
+header {
+    display: flex;
+    justify-content: center;
+}
+
+#quizTitle{
+    color: red;
+    font-size: 100px;
+    /* Whay didn't margin: 0 auto or display: flex, justify-content: center work to move this to the center?; you forgot to link the sheet lol :) */
+}
