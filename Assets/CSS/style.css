@@ -1,5 +1,6 @@
 *{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Estonia', cursive;
 }
 
 header {
@@ -26,6 +27,7 @@ header {
 
 #startBtn{
     display: block;
+    font-size: 40px;
 }
 
 #questionContainer{
@@ -35,7 +37,7 @@ header {
 }
 
 #question{
-    font-size: 30px;
+    font-size: 50px;
 }
 
 #answerChoices{
@@ -48,5 +50,5 @@ li{
 }
 
 .button{
-
+    font-size: 30px;
 }

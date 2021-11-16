@@ -67,48 +67,67 @@ document.querySelector("#btn2").textContent = questions[currentQuestion].answers
 document.querySelector("#btn3").textContent = questions[currentQuestion].answers[2];
 document.querySelector("#btn4").textContent = questions[currentQuestion].answers[3];
 
-// let correct = 0;
-// let incorrect = 0;
 
-// if (currentQuestion[0]) {
-//     if (("#btn")on("click)")){ //or should i switch this to answer[3] === true?
-//         correct++;
-//     } else {
-//         incorrect++;
-//     }
-// }
+// I tried to add the following if statements, and it messed up the question display and answer buttons
 
-// if (currentQuestion[1]) {
-//     if (answer[1]){
-//         correct++;
-//     } else {
-//         incorrect++;
-//     }
-// }
+let correct = 0;
+let incorrect = 0;
 
-// if (currentQuestion[2]) {
-//     if (answer[1]){
-//         correct++;
-//     } else {
-//         incorrect++;
-//     }
-// }
+document.querySelector("#answerChoices").addEventListener("click", function (){
+    console.log(this);
 
-// if (currentQuestion[3]) {
-//     if (answer[2]){
-//         correct++;
-//     } else {
-//         incorrect++;
-//     }
-// }
 
-// if (currentQuestion[4]) {
-//     if (answer[1]){
-//         correct++;
-//     } else {
-//         incorrect++;
-//     }
-// }
+}
+) // Use event delegation activity to figure out how to determine which button was clicked
+
+
+
+
+// $("#btn").on("click", function(){
+//     console.log(this);
+
+    // if (currentQuestion[0]) {
+    //     if (){ //or should i switch this to answer[3] === true?
+    //         correct++;
+    //     } else {
+    //         incorrect++;
+    //     }
+    // }
+    
+    // if (currentQuestion[1]) {
+    //     if (answer[1]){
+    //         correct++;
+    //     } else {
+    //         incorrect++;
+    //     }
+    // }
+    
+    // if (currentQuestion[2]) {
+    //     if (answer[1]){
+    //         correct++;
+    //     } else {
+    //         incorrect++;
+    //     }
+    // }
+    
+    // if (currentQuestion[3]) {
+    //     if (answer[2]){
+    //         correct++;
+    //     } else {
+    //         incorrect++;
+    //     }
+    // }
+    
+    // if (currentQuestion[4]) {
+    //     if (answer[1]){
+    //         correct++;
+    //     } else {
+    //         incorrect++;
+    //     }
+    // }
+// })
+
+
 
 
 
