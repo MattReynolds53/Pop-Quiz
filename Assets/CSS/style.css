@@ -1,3 +1,7 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 header {
     display: flex;
     justify-content: center;
@@ -31,7 +35,7 @@ header {
 }
 
 #question{
-
+    font-size: 30px;
 }
 
 #answerChoices{
