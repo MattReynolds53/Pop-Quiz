@@ -9,12 +9,25 @@ header {
     /* Whay didn't margin: 0 auto or display: flex, justify-content: center work to move this to the center?; you forgot to link the sheet lol :) */
 }
 
-#mainContainer{
+#timer{
+    font-size: 30px;
+}
 
+#mainContainer{
+    display: flex;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+#startBtn{
+    display: block;
 }
 
 #questionContainer{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #question{
@@ -25,6 +38,11 @@ header {
 
 }
 
+li{
+    list-style-type: none;
+    padding: 5px;
+}
+
 .button{
-    
+
 }

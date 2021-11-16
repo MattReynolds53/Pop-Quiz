@@ -1,8 +1,36 @@
-let quizTimer = document.querySelector("#timer");
+let timeEl = document.querySelector("#timer");
+let mainEl = document.querySelector("timerText");
+let secondsLeft = 60;
+let startButton = document.querySelector("#startBtn");
+let timerInterval;
+
+startButton.addEventListener("click", function(){
+    clearInterval(timerInterval);
+    secondsLeft= 60;
+
+    startTimer();
+});
+
+function startTimer(){
+    
+    timerInterval = setInterval(function() {
+        secondsLeft--;
+        console.log(secondsLeft);
+        timeEl.textContent = secondsLeft;
+
+        if (secondsLeft === 0) {
+            clearInterval(timerInterval);
+            mainEl.textContent = "You lose!";
+            mainEl.setAttribute("style", "font-size: 45px");
+        }
+    
+    }, 1000)
+}
+  
 
 let questions = [
     {
-        question: "In whih book is Sirius Black introduced?",
+        question: "In which book is Sirius Black introduced?",
         answers: ["The Chamber of Secrets", "The Order of the Phoenix", "The Goblet of Fire", "The Prisoner of Azkaban"],
         correctAnswer: "The Prisoner of Azkaban",
     },
@@ -33,11 +61,19 @@ let questions = [
 let currentQuestion = 0;
 const question = questions[currentQuestion];
 
-document.querySelector("#question").textContent = question[currentQuestion].question;
-document.querySelector("#btn1").textContent = question[currentQuestion].answers[0];
-document.querySelector("#btn2").textContent = question[currentQuestion].answers[1];
-document.querySelector("#btn3").textContent = question[currentQuestion].answers[2];
-document.querySelector("#btn4").textContent = question[currentQuestion].answers[3];
+document.querySelector("#question").textContent = questions[currentQuestion].question;
+document.querySelector("#btn1").textContent = questions[currentQuestion].answers[0];
+document.querySelector("#btn2").textContent = questions[currentQuestion].answers[1];
+document.querySelector("#btn3").textContent = questions[currentQuestion].answers[2];
+document.querySelector("#btn4").textContent = questions[currentQuestion].answers[3];
+
+
+
+
+
+
+
+
 
     // for (let i = 0; i < question[currentQuestion].answers.length; i++) {
     //     const element = questions[currentQuestion].answers[i];
