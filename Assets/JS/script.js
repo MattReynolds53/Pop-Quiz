@@ -6,6 +6,7 @@ let timerInterval;
 let totalCorrect = document.getElementById("finalScore");
 let totalIncorrect = 0;
 let finalScore = 0;
+
 // Question bank for quiz
 let questions = [
     {
@@ -65,11 +66,9 @@ function startQuiz(){
         timeEl.textContent = secondsLeft;
 
         if (secondsLeft === 0) {
-            clearInterval(timerInterval);
-            // mainEl.textContent = "You lose!";
-            secondsLeft.textContent = "Quiz over. Your answers will no longer count toward your score.";
-            // secondsLeft.setAttribute("style", "font-size: 45px");
+            quizComplete();
         }
+
     
     }, 1000)
 }
@@ -80,7 +79,6 @@ function startQuiz(){
 
 let answerChoices = document.querySelector("#answerChoices");
 
-// Listen for any clicks within the img-container div
 answerChoices.addEventListener("click", function(event) { 
     let element = event.target;
   console.log(element);
@@ -114,7 +112,6 @@ function nextQuestion() {
     } else {
         console.log("No further questions");
         quizComplete();
-        // am i missing anything here?
 
     }
 }
@@ -207,51 +204,3 @@ submitButton.addEventListener("submit", function() {
 })
 
 
-
-// let submitButton = document.getElementById("submitInitials");
-// let submission = localStorage.getItem("initials");
-// submitButton.textContent = submission;
-
-// submitButton.addEventListener("submit", function(){
-//     // event.preventDefault();
-//     submitButton.textContent = submission;
-//     localStorage.setItem("initials", submission);
-
-// })
-  
-
-
-
-
-
-
-
-
-
-
-
-
- //   if (state === "still") {
-    //     // Change the data-state attribute's value
-    //     // There are two different ways this attribute can be set
-    //     element.dataset.state = "animate";
-    //     element.setAttribute("data-state", "animate");
-  
-    //     // Update the image's source to the string being stored in the data-animate attribute
-    //     element.setAttribute("src", element.dataset.animate);
-    //   } else {
-    //     // Change the attributes back to their non-animated values
-    //     element.dataset.state = "still";
-    //     element.setAttribute("src", element.dataset.still);
-    //   }
-
-
-
-// Use event delegation activity to figure out how to determine which button was clicked
-
-
-
-    // for (let i = 0; i < question[currentQuestion].answers.length; i++) {
-    //     const element = questions[currentQuestion].answers[i];
-    // }
-    
