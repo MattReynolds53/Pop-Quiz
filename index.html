@@ -13,30 +13,28 @@
 
 <header>
     <h1 id="quizTitle">Harry Potter Pop Quiz!</h1> 
-        <div class="timerText">
-            <h3 id="timer">60</h3>
-        </div>
-    
-    
 </header>
 
 <body>
     <main id="mainContainer">
     <button id="startBtn">Start Quiz</button>
+    <div class="timerText">
+        <h3 id="timer">60</h3>
+    </div>
         <section id="questionContainer" class="hide">
             <div id="question"></div>
             <ul id="answerChoices" class="answerChoicesLayout">
                 <li>
-                    <button class="button" id="btn1"></button>
+                    <button class="button" data-value="0" id="btn1"></button>
                 </li>
                 <li>
-                    <button class="button" id="btn2"></button>
+                    <button class="button" data-value="1" id="btn2"></button>
                 </li>
                 <li>
-                    <button class="button" id="btn3"></button>
+                    <button class="button" data-value="2" id="btn3"></button>
                 </li>
                 <li>
-                    <button class="button" id="btn4"></button>
+                    <button class="button" data-value="3" id="btn4"></button>
                 </li>
             </ul>
         </section>
