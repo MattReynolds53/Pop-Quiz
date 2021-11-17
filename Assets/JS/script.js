@@ -5,7 +5,7 @@ let startButton = document.querySelector("#startBtn");
 let timerInterval;
 let totalCorrect = document.getElementById("finalScore");
 let totalIncorrect = 0;
-
+let finalScore = 0;
 // Question bank for quiz
 let questions = [
     {
@@ -121,7 +121,7 @@ function nextQuestion() {
 btn1.addEventListener("click", function() {
     if (btn1.textContent === questions[currentQuestion].correctAnswer) {
         console.log("Correct answer!");
-        totalCorrect++;
+        finalScore++;
         currentQuestion++;
         nextQuestion();
     } else {
@@ -131,7 +131,6 @@ btn1.addEventListener("click", function() {
         secondsLeft--;
         secondsLeft--;
         secondsLeft--;
-        totalIncorrect++;
         currentQuestion++;
         nextQuestion();
     }
@@ -140,7 +139,7 @@ btn1.addEventListener("click", function() {
 btn2.addEventListener("click", function() {
     if (btn2.textContent === questions[currentQuestion].correctAnswer) {
         console.log("Correct answer!");
-        totalCorrect++;
+        finalScore++;
         currentQuestion++;
         nextQuestion();
     } else {
@@ -150,7 +149,6 @@ btn2.addEventListener("click", function() {
         secondsLeft--;
         secondsLeft--;
         secondsLeft--;
-        totalIncorrect++;
         currentQuestion++;
         nextQuestion();
     }
@@ -159,7 +157,7 @@ btn2.addEventListener("click", function() {
 btn3.addEventListener("click", function() {
     if (btn3.textContent === questions[currentQuestion].correctAnswer) {
         console.log("Correct answer!");
-        totalCorrect++;
+        finalScore++;
         currentQuestion++;
         nextQuestion();
     } else {
@@ -169,7 +167,6 @@ btn3.addEventListener("click", function() {
         secondsLeft--;
         secondsLeft--;
         secondsLeft--;
-        totalIncorrect++;
         currentQuestion++;
         nextQuestion();
     }
@@ -178,7 +175,7 @@ btn3.addEventListener("click", function() {
 btn4.addEventListener("click", function() {
     if (btn4.textContent === questions[currentQuestion].correctAnswer) {
         console.log("Correct answer!");
-        totalCorrect++;
+        finalScore++;
         currentQuestion++;
         nextQuestion();
     } else {
@@ -188,7 +185,6 @@ btn4.addEventListener("click", function() {
         secondsLeft--;
         secondsLeft--;
         secondsLeft--;
-        totalIncorrect++;
         currentQuestion++;
         nextQuestion();
     }
@@ -199,10 +195,28 @@ function quizComplete() {
     document.getElementById("questionContainer").style.display = "none";
     document.getElementById("timer").style.display = "none";
     document.getElementById("finalScore").style.visibility = "visible";
-    // document.getElementById("finalScore").style.color = "black";
+    document.getElementById("totalScore").textContent = `Final Score: ${finalScore}`;
 }
 
 
+let submitButton = document.getElementById("submitBtn");
+
+submitButton.addEventListener("submit", function() {
+    console.log("Initials stored.");
+})
+
+
+
+// let submitButton = document.getElementById("submitInitials");
+// let submission = localStorage.getItem("initials");
+// submitButton.textContent = submission;
+
+// submitButton.addEventListener("submit", function(){
+//     // event.preventDefault();
+//     submitButton.textContent = submission;
+//     localStorage.setItem("initials", submission);
+
+// })
   
 
 
