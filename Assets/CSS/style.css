@@ -74,5 +74,13 @@ li{
 }
 
 #finalScore{
-    color: white;
+    color: black;
+    visibility: hidden;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#submitBtn{
+    font-size: 25px;
 }

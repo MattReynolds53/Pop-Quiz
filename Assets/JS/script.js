@@ -198,8 +198,8 @@ function quizComplete() {
     console.log("The quiz is completed.");
     document.getElementById("questionContainer").style.display = "none";
     document.getElementById("timer").style.display = "none";
-    document.getElementById("finalScore").textContent = "Final Score:" + totalCorrect;
-    document.getElementById("finalScore").style.color = "black";
+    document.getElementById("finalScore").style.visibility = "visible";
+    // document.getElementById("finalScore").style.color = "black";
 }
 
 
