@@ -10,27 +10,27 @@ let questions = [
     {
         question: "In which book is Sirius Black introduced?",
         answers: ["The Chamber of Secrets", "The Order of the Phoenix", "The Goblet of Fire", "The Prisoner of Azkaban"],
-        correctAnswer: 3,
+        correctAnswer: "The Prisoner of Azkaban",
     },
     {
         question: "According to the book, who gives Harry the gillyweed before he enters into the second task of the Triwizard Tournament in the Goblet of Fire?",
         answers: ["Albus Dumbledore", "Dobby the House Elf", "Cedric Diggory", "Neville Longbottom"],
-        correctAnswer: 1,
+        correctAnswer: "Dobby the House Elf",
     },
     {
         question: "What is the model of the first broom Harry receives ahead of his first quidditch match?",
         answers: ["Firebolt", "Nimbus 2000", "Nimbus 2001", "Nimbus 3000"],
-        correctAnswer: 1,
+        correctAnswer: "Nimbus 2000",
     },
     {
         question: "What was Sirius Black's nickname?",
         answers: ["Moony", "Wormtail", "Padfoot", "Prongs"],
-        correctAnswer: 2,
+        correctAnswer: "Padfoot",
     },
     {
         question: "What were the professions of Hermoine's parents?",
         answers: ["Dentists", "Doctors", "Professors", "Entrepreneurs"],
-        correctAnswer: 0,
+        correctAnswer: "Dentists",
     
     }
 ]
@@ -103,7 +103,7 @@ let btn4 = document.querySelector("#btn4");
 function nextQuestion() {
     console.log(currentQuestion);
 
-    if (currentQuestion < 4) {
+    if (currentQuestion < 5) {
         questionDisplay.textContent = questions[currentQuestion].question;
         btn1.textContent = questions[currentQuestion].answers[0]; 
         btn2.textContent = questions[currentQuestion].answers[1];
@@ -130,6 +130,47 @@ btn1.addEventListener("click", function() {
     }
 })
 
+btn2.addEventListener("click", function() {
+    if (btn2.textContent === questions[currentQuestion].correctAnswer) {
+        console.log("Correct answer!");
+        totalCorrect++;
+        currentQuestion++;
+        nextQuestion();
+    } else {
+        console.log("Wrong answer");
+        totalIncorrect++;
+        currentQuestion++;
+        nextQuestion();
+    }
+})
+
+btn3.addEventListener("click", function() {
+    if (btn3.textContent === questions[currentQuestion].correctAnswer) {
+        console.log("Correct answer!");
+        totalCorrect++;
+        currentQuestion++;
+        nextQuestion();
+    } else {
+        console.log("Wrong answer");
+        totalIncorrect++;
+        currentQuestion++;
+        nextQuestion();
+    }
+})
+
+btn4.addEventListener("click", function() {
+    if (btn4.textContent === questions[currentQuestion].correctAnswer) {
+        console.log("Correct answer!");
+        totalCorrect++;
+        currentQuestion++;
+        nextQuestion();
+    } else {
+        console.log("Wrong answer");
+        totalIncorrect++;
+        currentQuestion++;
+        nextQuestion();
+    }
+})
 
 
 
