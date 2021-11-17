@@ -9,27 +9,27 @@ let totalIncorrect = 0;
 let questions = [
     {
         question: "In which book is Sirius Black introduced?",
-        answers: ["The Chamber of Secrets", "The Order of the Phoenix", "The Goblet of Fire", "The Prisoner of Azkaban"],
+        answerChoices: ["The Chamber of Secrets", "The Order of the Phoenix", "The Goblet of Fire", "The Prisoner of Azkaban"],
         correctAnswer: "The Prisoner of Azkaban",
     },
     {
         question: "According to the book, who gives Harry the gillyweed before he enters into the second task of the Triwizard Tournament in the Goblet of Fire?",
-        answers: ["Albus Dumbledore", "Dobby the House Elf", "Cedric Diggory", "Neville Longbottom"],
+        answerChoices: ["Albus Dumbledore", "Dobby the House Elf", "Cedric Diggory", "Neville Longbottom"],
         correctAnswer: "Dobby the House Elf",
     },
     {
         question: "What is the model of the first broom Harry receives ahead of his first quidditch match?",
-        answers: ["Firebolt", "Nimbus 2000", "Nimbus 2001", "Nimbus 3000"],
+        answerChoices: ["Firebolt", "Nimbus 2000", "Nimbus 2001", "Nimbus 3000"],
         correctAnswer: "Nimbus 2000",
     },
     {
         question: "What was Sirius Black's nickname?",
-        answers: ["Moony", "Wormtail", "Padfoot", "Prongs"],
+        answerChoices: ["Moony", "Wormtail", "Padfoot", "Prongs"],
         correctAnswer: "Padfoot",
     },
     {
         question: "What were the professions of Hermoine's parents?",
-        answers: ["Dentists", "Doctors", "Professors", "Entrepreneurs"],
+        answerChoices: ["Doctors", "Dentists", "Professors", "Entrepreneurs"],
         correctAnswer: "Dentists",
     
     }
@@ -41,10 +41,10 @@ let currentQuestion = 0;
 let question = questions[currentQuestion];
 
 document.querySelector("#question").textContent = questions[currentQuestion].question;
-document.querySelector("#btn1").textContent = questions[currentQuestion].answers[0];
-document.querySelector("#btn2").textContent = questions[currentQuestion].answers[1];
-document.querySelector("#btn3").textContent = questions[currentQuestion].answers[2];
-document.querySelector("#btn4").textContent = questions[currentQuestion].answers[3];
+document.querySelector("#btn1").textContent = questions[currentQuestion].answerChoices[0];
+document.querySelector("#btn2").textContent = questions[currentQuestion].answerChoices[1];
+document.querySelector("#btn3").textContent = questions[currentQuestion].answerChoices[2];
+document.querySelector("#btn4").textContent = questions[currentQuestion].answerChoices[3];
 
 // Starting the Quiz
 
@@ -105,10 +105,10 @@ function nextQuestion() {
 
     if (currentQuestion < 5) {
         questionDisplay.textContent = questions[currentQuestion].question;
-        btn1.textContent = questions[currentQuestion].answers[0]; 
-        btn2.textContent = questions[currentQuestion].answers[1];
-        btn3.textContent = questions[currentQuestion].answers[2];
-        btn4.textContent = questions[currentQuestion].answers[3];
+        btn1.textContent = questions[currentQuestion].answerChoices[0]; 
+        btn2.textContent = questions[currentQuestion].answerChoices[1];
+        btn3.textContent = questions[currentQuestion].answerChoices[2];
+        btn4.textContent = questions[currentQuestion].answerChoices[3];
     } else {
         console.log("No further questions");
         // am i missing anything here?
