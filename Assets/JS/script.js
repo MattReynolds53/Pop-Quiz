@@ -1,6 +1,6 @@
 let timeEl = document.querySelector("#timer");
 let mainEl = document.querySelector("timerText");
-let secondsLeft = 30;
+let secondsLeft = 60;
 let startButton = document.querySelector("#startBtn");
 let timerInterval;
 let totalCorrect = document.getElementById("finalScore");
@@ -51,8 +51,9 @@ document.querySelector("#btn4").textContent = questions[currentQuestion].answerC
 
 startButton.addEventListener("click", function(){
     clearInterval(timerInterval);
-    secondsLeft= 30;
+    secondsLeft= 60;
     document.getElementById("startBtn").style.display = "none";
+    document.getElementById("questionContainer").style.visibility = "visible";
     startQuiz();
     
 });
