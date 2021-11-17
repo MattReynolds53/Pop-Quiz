@@ -51,7 +51,7 @@ document.querySelector("#btn4").textContent = questions[currentQuestion].answerC
 startButton.addEventListener("click", function(){
     clearInterval(timerInterval);
     secondsLeft= 60;
-
+    document.getElementById("startBtn").style.display = "none";
     startQuiz();
     
 });
@@ -60,7 +60,6 @@ function startQuiz(){
     
     timerInterval = setInterval(function() {
         secondsLeft--;
-        console.log(secondsLeft);
         timeEl.textContent = secondsLeft;
 
         if (secondsLeft === 0) {
@@ -111,6 +110,7 @@ function nextQuestion() {
         btn4.textContent = questions[currentQuestion].answerChoices[3];
     } else {
         console.log("No further questions");
+        quizComplete();
         // am i missing anything here?
 
     }
@@ -124,6 +124,7 @@ btn1.addEventListener("click", function() {
         nextQuestion();
     } else {
         console.log("Wrong answer");
+        secondsLeft -10;
         totalIncorrect++;
         currentQuestion++;
         nextQuestion();
@@ -138,6 +139,7 @@ btn2.addEventListener("click", function() {
         nextQuestion();
     } else {
         console.log("Wrong answer");
+        secondsLeft -10;
         totalIncorrect++;
         currentQuestion++;
         nextQuestion();
@@ -152,6 +154,7 @@ btn3.addEventListener("click", function() {
         nextQuestion();
     } else {
         console.log("Wrong answer");
+        secondsLeft -10;
         totalIncorrect++;
         currentQuestion++;
         nextQuestion();
@@ -166,15 +169,17 @@ btn4.addEventListener("click", function() {
         nextQuestion();
     } else {
         console.log("Wrong answer");
+        secondsLeft -10;
         totalIncorrect++;
         currentQuestion++;
         nextQuestion();
     }
 })
 
-
-
-
+function quizComplete() {
+    console.log("The quiz is completed.");
+    document.getElementById("questionContainer").style.display = "none";
+}
 
 
   
