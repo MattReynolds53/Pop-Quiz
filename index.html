@@ -16,13 +16,17 @@
 </header>
 
 <body>
-    <section>
-        <main id="mainContainer">
+    <section class=timerDisplay>
+        <div>
             <button id="startBtn">Start Quiz</button>
-            <div class="timerText">
-                <h3 id="timer">60</h3>
+        </div>
+        <div class="timerText">
+             <h3 id="timer">30</h3>
+        </div>
     </section>
-    </div>
+            
+        
+    <main>
         <section id="questionContainer" class="hide">
             <div id="question"></div>
             <ul id="answerChoices" class="answerChoicesLayout">
@@ -42,6 +46,10 @@
         </section>
 
     </main>
+
+    <section class="scoreCount">
+        <p id="finalScore">Final Score: </p>
+    </section>
     <script src="./Assets/JS/script.js"></script>
 </body>
 </html>

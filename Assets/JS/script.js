@@ -1,10 +1,11 @@
 let timeEl = document.querySelector("#timer");
 let mainEl = document.querySelector("timerText");
-let secondsLeft = 60;
+let secondsLeft = 30;
 let startButton = document.querySelector("#startBtn");
 let timerInterval;
-let totalCorrect = 0;
+let totalCorrect = document.getElementById("finalScore");
 let totalIncorrect = 0;
+
 // Question bank for quiz
 let questions = [
     {
@@ -50,7 +51,7 @@ document.querySelector("#btn4").textContent = questions[currentQuestion].answerC
 
 startButton.addEventListener("click", function(){
     clearInterval(timerInterval);
-    secondsLeft= 60;
+    secondsLeft= 30;
     document.getElementById("startBtn").style.display = "none";
     startQuiz();
     
@@ -64,8 +65,9 @@ function startQuiz(){
 
         if (secondsLeft === 0) {
             clearInterval(timerInterval);
-            mainEl.textContent = "You lose!";
-            mainEl.setAttribute("style", "font-size: 45px");
+            // mainEl.textContent = "You lose!";
+            secondsLeft.textContent = "Quiz over. Your answers will no longer count toward your score.";
+            // secondsLeft.setAttribute("style", "font-size: 45px");
         }
     
     }, 1000)
@@ -124,7 +126,11 @@ btn1.addEventListener("click", function() {
         nextQuestion();
     } else {
         console.log("Wrong answer");
-        secondsLeft -10;
+        secondsLeft--;
+        secondsLeft--;
+        secondsLeft--;
+        secondsLeft--;
+        secondsLeft--;
         totalIncorrect++;
         currentQuestion++;
         nextQuestion();
@@ -139,7 +145,11 @@ btn2.addEventListener("click", function() {
         nextQuestion();
     } else {
         console.log("Wrong answer");
-        secondsLeft -10;
+        secondsLeft--;
+        secondsLeft--;
+        secondsLeft--;
+        secondsLeft--;
+        secondsLeft--;
         totalIncorrect++;
         currentQuestion++;
         nextQuestion();
@@ -154,7 +164,11 @@ btn3.addEventListener("click", function() {
         nextQuestion();
     } else {
         console.log("Wrong answer");
-        secondsLeft -10;
+        secondsLeft--;
+        secondsLeft--;
+        secondsLeft--;
+        secondsLeft--;
+        secondsLeft--;
         totalIncorrect++;
         currentQuestion++;
         nextQuestion();
@@ -169,7 +183,11 @@ btn4.addEventListener("click", function() {
         nextQuestion();
     } else {
         console.log("Wrong answer");
-        secondsLeft -10;
+        secondsLeft--;
+        secondsLeft--;
+        secondsLeft--;
+        secondsLeft--;
+        secondsLeft--;
         totalIncorrect++;
         currentQuestion++;
         nextQuestion();
@@ -179,6 +197,9 @@ btn4.addEventListener("click", function() {
 function quizComplete() {
     console.log("The quiz is completed.");
     document.getElementById("questionContainer").style.display = "none";
+    document.getElementById("timer").style.display = "none";
+    document.getElementById("finalScore").textContent = "Final Score:" + totalCorrect;
+    document.getElementById("finalScore").style.color = "black";
 }
 
 
