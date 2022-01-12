@@ -119,16 +119,12 @@ function nextQuestion() {
 btn1.addEventListener("click", function() {
     if (btn1.textContent === questions[currentQuestion].correctAnswer) {
         console.log("Correct answer!");
-        finalScore++;
+        finalScore += 20;
         currentQuestion++;
         nextQuestion();
     } else {
         console.log("Wrong answer");
-        secondsLeft--;
-        secondsLeft--;
-        secondsLeft--;
-        secondsLeft--;
-        secondsLeft--;
+        secondsLeft -= 5;
         currentQuestion++;
         nextQuestion();
     }
@@ -137,16 +133,12 @@ btn1.addEventListener("click", function() {
 btn2.addEventListener("click", function() {
     if (btn2.textContent === questions[currentQuestion].correctAnswer) {
         console.log("Correct answer!");
-        finalScore++;
+        finalScore+=20;
         currentQuestion++;
         nextQuestion();
     } else {
         console.log("Wrong answer");
-        secondsLeft--;
-        secondsLeft--;
-        secondsLeft--;
-        secondsLeft--;
-        secondsLeft--;
+        secondsLeft-=5
         currentQuestion++;
         nextQuestion();
     }
@@ -155,16 +147,12 @@ btn2.addEventListener("click", function() {
 btn3.addEventListener("click", function() {
     if (btn3.textContent === questions[currentQuestion].correctAnswer) {
         console.log("Correct answer!");
-        finalScore++;
+        finalScore+=20;
         currentQuestion++;
         nextQuestion();
     } else {
         console.log("Wrong answer");
-        secondsLeft--;
-        secondsLeft--;
-        secondsLeft--;
-        secondsLeft--;
-        secondsLeft--;
+        secondsLeft-=5
         currentQuestion++;
         nextQuestion();
     }
@@ -173,16 +161,12 @@ btn3.addEventListener("click", function() {
 btn4.addEventListener("click", function() {
     if (btn4.textContent === questions[currentQuestion].correctAnswer) {
         console.log("Correct answer!");
-        finalScore++;
+        finalScore+=20;
         currentQuestion++;
         nextQuestion();
     } else {
         console.log("Wrong answer");
-        secondsLeft--;
-        secondsLeft--;
-        secondsLeft--;
-        secondsLeft--;
-        secondsLeft--;
+        secondsLeft-=5
         currentQuestion++;
         nextQuestion();
     }
@@ -199,8 +183,19 @@ function quizComplete() {
 
 let submitButton = document.getElementById("submitBtn");
 
-submitButton.addEventListener("submit", function() {
+submitButton.addEventListener("click", function() {
     console.log("Initials stored.");
+    var storage = JSON.parse(localStorage.getItem('highscoreHistory'))
+    if (storage === null) {
+        storage = []
+    }
+    var currentUser = {
+        initials: document.getElementById('initials').value,
+        currentScore: finalScore 
+    }
+    storage.push(currentUser)
+    localStorage.setItem('highscoreHistory', JSON.stringify(storage))
+    window.location.href = 'highScore.html'
 })
 
 
