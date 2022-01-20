@@ -1,87 +1,94 @@
-*{
-    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    font-family: 'Estonia', cursive;
+* {
+  /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: "Estonia", cursive;
 }
 
 header {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-#quizTitle{
-    color: red;
-    font-size: 100px;
-    /* Whay didn't margin: 0 auto or display: flex, justify-content: center work to move this to the center?; you forgot to link the sheet lol :) */
+#quizTitle {
+  color: red;
+  font-size: 100px;
+  /* Whay didn't margin: 0 auto or display: flex, justify-content: center work to move this to the center?; you forgot to link the sheet lol :) */
 }
 
-.timerDisplay{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.timerDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#timer{
-    font-size: 30px;
+#timer {
+  font-size: 30px;
 }
 
-#mainContainer{
-    display: flex;
-    align-content: stretch;
-    justify-content: space-evenly;
-    align-items: baseline;
+#mainContainer {
+  display: flex;
+  align-content: stretch;
+  justify-content: space-evenly;
+  align-items: baseline;
 }
 
-#startBtn{
-    display: block;
-    font-size: 40px;
+#startBtn {
+  display: block;
+  font-size: 40px;
 }
 
-#questionContainer{
-    display: grid;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    max-width: 90%;
-    padding: 50px;
-    visibility: hidden;
+#questionContainer {
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  max-width: 90%;
+  padding: 50px;
+  visibility: hidden;
 }
 
-#question{
-    font-size: 50px;
+#question {
+  font-size: 50px;
 }
 
 /* #answerChoices{
     
 } */
 
-li{
-    list-style-type: none;
-    padding: 5px;
+li {
+  list-style-type: none;
+  padding: 5px;
 }
 
-.button{
-    font-size: 30px;
+.button {
+  font-size: 30px;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
-.scoreCount{
-    font-size: 45px;
+.scoreCount {
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+#finalScore {
+  color: black;
+  visibility: hidden;
+  align-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+#submitBtn {
+  font-size: 25px;
+}
+
+#highScoreLink {
     display: flex;
     justify-content: center;
-}
-
-#finalScore{
-    color: black;
-    visibility: hidden;
-    align-content: space-around;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-#submitBtn{
-    font-size: 25px;
+    font-size: 40px;
+    padding-top: 20px;
 }
